@@ -4,7 +4,7 @@
 .btn:active{
     outline: 0 !important;
 }
-/* entire container, keeps perspective */
+
 
 /* flip the pane when hovered */
 .card-container:not(.manual-flip):hover .card,
@@ -90,6 +90,7 @@ body,
         html {
             margin-top: 50px;
             background: #60a3bc !important;
+		min-height: 500px;
         }
          .front, .back {
             -webkit-backface-visibility: hidden;
