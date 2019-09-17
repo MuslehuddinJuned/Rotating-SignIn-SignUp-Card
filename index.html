@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rotating SignIn/SignUp Card</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href='css/rotating-card.css' rel='stylesheet' />
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
+</head>
+<div class="container mx-auto">
+    <div class="row">        
+             <div class="card-container manual-flip col-md-12">
+                <div class="card m-auto">
+                    <div class="front">
+                        <div class="d-flex justify-content-center mb-5">
+                          <div class="brand_logo_container">
+                            <img src="https://i.pinimg.com/originals/f1/ce/ab/f1ceabfae92a589fe2da5fffa1481708.jpg" class="brand_logo" alt="Logo">
+                          </div>
+                        </div>
+                        <div class="content">
+                            
+                        <div class="d-flex justify-content-center form_container mt-5">
+                          <form>
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="far fa-envelope"></i></i></span>
+                              </div>
+                              <input type="text" name="" class="form-control input_user" value="" placeholder="Email">
+                            </div>
+                            <div class="input-group mb-2">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
+                              </div>
+                              <input type="password" name="" class="form-control input_pass" value="" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                                <label class="custom-control-label" for="customControlInline">Remember me</label>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                          <button type="button" name="button" class="btn login_btn">Login</button>
+                        </div>
+                        <div class="d-flex justify-content-center links">
+                            <a href="#" class="text-light">Forgot your password?</a>
+                        </div>
+                            <div class="footer">
+                                <button class="btn btn-simple text-light" onclick="rotateCard(this)">
+                                    Don't have an account?  Sign Up
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="d-flex justify-content-center mb-5">
+                          <div class="brand_logo_container">
+                            <img src="https://i.pinimg.com/originals/f1/ce/ab/f1ceabfae92a589fe2da5fffa1481708.jpg" class="brand_logo" alt="Logo">
+                          </div>
+                        </div>
+                        <div class="content">
+                            
+                        <div class="d-flex justify-content-center form_container mt-5">
+                          <form>
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="far fa-smile-wink"></i></i></span>
+                              </div>
+                              <input type="text" name="Name" class="form-control" value="" placeholder="Name">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="far fa-envelope"></i></i></span>
+                              </div>
+                              <input type="text" name="Email" class="form-control" value="" placeholder="Email">
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-unlock"></i></span>
+                              </div>
+                              <input type="password" name="Password" class="form-control input_pass" value="" placeholder="Password">
+                            </div>
+                            <div class="input-group mb-2">
+                              <div class="input-group-append">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                              </div>
+                              <input type="password" name="ConfirmPassword" class="form-control input_pass" value="" placeholder="Confirm Password">
+                            </div>
+                          </form>
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-3 login_container">
+                          <button type="button" name="button" class="btn login_btn">Sign Up</button>
+                        </div>
+                            <div class="footer">
+                                <button class="btn btn-simple text-light" onclick="rotateCard(this)">
+                                    Have an account?  Sign In
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+            </div> <!-- end card-container -->
+    </div> <!-- end row -->
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $().ready(function(){
+        $('[rel="tooltip"]').tooltip();
+
+        $('a.scroll-down').click(function(e){
+            e.preventDefault();
+            scroll_target = $(this).data('href');
+             $('html, body').animate({
+                 scrollTop: $(scroll_target).offset().top - 60
+             }, 1000);
+        });
+
+    });
+
+    function rotateCard(btn){
+        var $card = $(btn).closest('.card-container');
+        console.log($card);
+        if($card.hasClass('hover')){
+            $card.removeClass('hover');
+        } else {
+            $card.addClass('hover');
+        }
+    }
+
+
+</script>
+
+</body>
+</html>
