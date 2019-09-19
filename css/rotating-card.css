@@ -34,7 +34,7 @@
      -o-transform-style: preserve-3d;
         transform-style: preserve-3d;
 	position: relative;
-            width: 350px;
+            width: 330px;
             border: none;
 }
 
@@ -102,7 +102,7 @@ body,
             left: 0;
             background: #22A466;
             min-height: 400px;
-            width: 350px;
+            width: 330px;
             margin-top: auto;
             margin-bottom: auto;
             display: flex;
